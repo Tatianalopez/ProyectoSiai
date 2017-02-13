@@ -2328,13 +2328,13 @@ public class BeanDireccionar {
                         mBRadicacion.setRadicacionRegistro(false);
 
                         this.EstadotabRadicacion = false;
-                        this.url_pagina_Facturacion = "../Facturacion/FormF-GestionActYRec.xhtml";
+                        this.url_pagina_Facturacion = "../Facturacion/nwejs.xhtml";
                     }
                     break;
 
                 case "Remisiones":
-                    mBConsultaFactu.limpiar();
-                    this.url_pagina_Facturacion = "../Facturacion/FormF-Remisiones.xhtml";
+
+                    this.url_pagina_Facturacion = "../Facturacion/newjs.xhtml";
                     break;
 
                 case "PendiExcede":
