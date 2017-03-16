@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Pendientes por facturar</title>
+        <style type="text/css">
+            .FirstCol td:nth-child(1) {
+                width: 140px !important  ;
+                height: #{MBPreRadicacion.tamañoTablas} !important ;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form id="FrmPndFact" >
+            <p:outputPanel id ="FormPend" autoUpdate="true">
+                <table cellpadding="4" cellspacing="4" style="width: 100%;font-family: Arial;" >
+                    <tr>
+                        <td><p:outputLabel value="Id"/></td>
+                        <td><p:inputText value="#{MBFacturacion.id}"/></td>
+                    </tr>
+                    <tr>
+                        <td><p:outputLabel value="Cod descuento"/></td>
+                        <td><p:inputText value="#{MBFacturacion.codDEscuento}"/></td>
+                    </tr>
+                    <tr>
+                        <td><p:outputLabel value="Nombre"/></td>
+                        <td> <p:inputText value="#{MBFacturacion.nombre2}"/></td>
+                    </tr>
+                    <tr>
+                        <td><p:outputLabel value="Direccion"/></td>
+                        <td> <p:inputText value="#{MBFacturacion.direccion}"/></td>
+                    </tr>
+                    <tr>
+                        <td><p:outputLabel value="Telefono"/></td>
+                        <td> <p:inputText value="#{MBFacturacion.telefono}"/></td>
+                    </tr>
+                    <tr>
+                        <td><p:outputLabel value="Fax"/></td>
+                        <td> <p:inputText value="#{MBFacturacion.fax}"/></td>
+                    </tr>
+                    <tr>
+                        <td><p:commandButton value="insertar" action="#{MBFacturacion.Limpiar(9)}"/></td>
+                    </tr>
+                    <tr><td> <p:commandButton value="Enter" action="hola?faces-redirect=true" ajax="false"/></td></tr>
+
+                </table>
+            </p:outputPanel>
+
+        </h:form>
+
+    </h:body>
+</html>

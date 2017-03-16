@@ -56,9 +56,9 @@ import org.primefaces.context.RequestContext;
  * @since 10-10-2015 1.0.0
  *
  */
-@ManagedBean(name = "MBFacturacion")
+/*@ManagedBean(name = "MBFacturacion")
 @ViewScoped
-@SessionScoped
+@SessionScoped*/
 public class BeanFacturacion {
 
     /*Variables para la insersion*/
@@ -116,6 +116,61 @@ public class BeanFacturacion {
     private int valAdiFacSinIva = 0;
 
     private int valorTotalTabla = 0;
+
+    private String id;
+    private String codDEscuento;
+    private String nombre2;
+    private String direccion;
+    private String telefono;
+    private String fax;
+
+    public String getNombre2() {
+        return nombre2;
+    }
+
+    public void setNombre2(String nombre2) {
+        this.nombre2 = nombre2;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getCodDEscuento() {
+        return codDEscuento;
+    }
+
+    public void setCodDEscuento(String codDEscuento) {
+        this.codDEscuento = codDEscuento;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getFax() {
+        return fax;
+    }
+
+    public void setFax(String fax) {
+        this.fax = fax;
+    }
 
     List<LogFacturacion> ListTablaDistancias = new ArrayList<>();
     List<LogFacturacion> ListTablaDescuentos = new ArrayList<>();
@@ -4146,6 +4201,11 @@ public class BeanFacturacion {
             case 8:
                 listaDetallesFac = new ArrayList<>();
                 detalleFactura = "";
+                break;
+
+            case 9:
+                LogFacturacion r = new LogFacturacion();
+                r.insertar("laura");
                 break;
 
         }
